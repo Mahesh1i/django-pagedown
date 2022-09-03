@@ -25,7 +25,7 @@ def image_upload_view(request):
         raise PermissionDenied()
 
     if not IMAGE_UPLOAD_ENABLED:
-        raise ImproperlyConfigured('check wheather Image upload is disabled')
+        raise ImproperlyConfigured('check wheather Image upload is disabled ...')
 
     form = ImageUploadForm(request.POST, request.FILES)
     if form.is_valid():
